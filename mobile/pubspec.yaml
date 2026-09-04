@@ -1,0 +1,23 @@
+name: ai_study_companion
+description: Production-oriented AI Study Companion mobile client
+publish_to: "none"
+version: 2.0.0+2
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.5.0
+  flutter_secure_storage: ^9.2.4
+  file_picker: ^10.3.2
+  http_parser: ^4.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
