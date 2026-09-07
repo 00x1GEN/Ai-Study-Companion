@@ -7,9 +7,9 @@ from app.services.gamification_service import seed_badges
 def run():
     ensure_extensions()
     with SessionLocal() as db:
-        user = db.scalar(select(User).where(User.email == "student@aspira.test"))
+        user = db.scalar(select(User).where(User.email == "student@aspira.example.com"))
         if not user:
-            user = User(name="Demo Student", email="student@aspira.test", password_hash=hash_password("password123"))
+            user = User(name="Demo Student", email="student@aspira.example.com", password_hash=hash_password("password123"))
             db.add(user); db.commit(); db.refresh(user)
         course = db.scalar(select(Course).where(Course.owner_id == user.id, Course.title == "Data Structures and Algorithms"))
         if not course:

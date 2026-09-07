@@ -15,7 +15,7 @@ def _docx_bytes() -> bytes:
 
 
 def test_full_reference_flow():
-    email = f"qa-{uuid4().hex[:10]}@example.test"
+    email = f"qa-{uuid4().hex[:10]}@example.com"
     password = "password123"
     with TestClient(app) as client:
         # Register and obtain rotating token pair.
